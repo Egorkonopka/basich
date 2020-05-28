@@ -6,6 +6,11 @@ use yii\db\ActiveRecord;
 
 class Category extends ActiveRecord{
 
+	public static function primaryKey()
+      {
+          return ["id"];
+      }
+
 	public static function tableName(){
 		return 'category';
 	}

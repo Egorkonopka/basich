@@ -1,0 +1,8 @@
+[Thu May 28 15:08:29.678419 2020] [core:alert] [pid 18878] [client 127.0.0.1:34586] /var/www/amm-app/.htaccess: RewriteRule: bad argument line './web/index.php'
+[Thu May 28 15:08:42.522115 2020] [core:alert] [pid 18877] [client 127.0.0.1:34596] /var/www/amm-app/.htaccess: RewriteRule: bad argument line './web/index.php'
+[Thu May 28 15:08:42.544235 2020] [core:alert] [pid 18881] [client 127.0.0.1:34598] /var/www/amm-app/.htaccess: RewriteRule: bad argument line './web/index.php', referer: http://amm-app/
+[Thu May 28 15:08:49.432265 2020] [core:alert] [pid 18838] [client 127.0.0.1:34602] /var/www/amm-app/.htaccess: RewriteRule: bad argument line './web/index.php', referer: http://amm-app/
+[Thu May 28 15:08:50.128584 2020] [core:alert] [pid 18840] [client 127.0.0.1:34610] /var/www/amm-app/.htaccess: RewriteRule: bad argument line './web/index.php', referer: http://amm-app/
+[Thu May 28 15:08:51.365816 2020] [core:alert] [pid 18879] [client 127.0.0.1:34612] /var/www/amm-app/.htaccess: RewriteRule: bad argument line './web/index.php', referer: http://amm-app/
+[Thu May 28 15:08:51.381662 2020] [core:alert] [pid 18839] [client 127.0.0.1:34614] /var/www/amm-app/.htaccess: RewriteRule: bad argument line './web/index.php'
+[Thu May 28 15:16:24.094392 2020] [php7:error] [pid 18881] [client 127.0.0.1:34892] PHP Parse error:  syntax error, unexpected ''id'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' in /var/www/amm-app/config/web.php on line 8
