@@ -1,6 +1,6 @@
 	<?php
 use yii\helpers\Html;
-
+use yii\widgets\LinkPager;
 /* @var $this yii\web\View */
 
 
@@ -8,7 +8,7 @@ use yii\helpers\Html;
 
 	<section id="advertisement">
 		<div class="container">
-			<img src="images/shop/advertisement.jpg" alt="" />
+			<img src="/images/shop/advertisement.jpg" alt="" />
 		</div>
 	</section>
 
@@ -55,7 +55,7 @@ use yii\helpers\Html;
 				
 				<div class="col-sm-9 padding-right">
 					<div class="features_items"><!--features_items-->
-						<h2 class="title text-center">Features Items</h2>
+						<h2 class="title text-center"><?= $category->name ?></h2>
 						
 						<?php $i=0; if(!empty($products)): ?>
 							<?php foreach ($products as $product) :?>
@@ -95,17 +95,24 @@ use yii\helpers\Html;
 								<div class="clearfix"></div>
 							<?php endif; ?>
 							<?php endforeach ; ?>
+								<div class="clearfix"></div>
+							<?php
+							echo LinkPager::Widget([
+								'pagination' => $pages,
+							])
+							?>
+
 							<?php else :?>
 								<h2> no tovar </h2>
 						<?php endif;?>
-								<div class="clearfix"></div>
+								
 												
-						<ul class="pagination">
+						<!-- <ul class="pagination">
 							<li class="active"><a href="">1</a></li>
 							<li><a href="">2</a></li>
 							<li><a href="">3</a></li>
 							<li><a href="">&raquo;</a></li>
-						</ul>
+						</ul> -->
 					</div><!--features_items-->
 				</div>
 			</div>

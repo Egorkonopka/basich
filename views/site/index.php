@@ -2,7 +2,7 @@
 
 /* @var $this yii\web\View */
  // старая версия
-$this->title = 'My Yii Application';
+$this->title = 'AMM-Dnepr';
 ?>
 
 <section id="slider"><!--slider-->
@@ -174,13 +174,13 @@ $this->title = 'My Yii Application';
                                         <p>Easy Polo Black Edition</p>
                                         <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                     </div>
-                                    <div class="product-overlay">
+                                    <<!-- div class="product-overlay">
                                         <div class="overlay-content">
                                             <h2>$56</h2>
                                             <p>Easy Polo Black Edition</p>
                                             <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <div class="choose">
                                     <ul class="nav nav-pills nav-justified">
