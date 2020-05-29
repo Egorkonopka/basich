@@ -10,7 +10,7 @@ use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 use app\assets\ltAppAsset;
-
+use yii\helpers\Url;
 AppAsset::register($this);
 ltAppAsset::register($this);
 ?>
@@ -145,7 +145,9 @@ ltAppAsset::register($this);
                     </div>
                     <div class="col-sm-3">
                         <div class="search_box pull-right">
-                            <input type="text" placeholder="Search"/>
+                                <form method="get" action="<?= Url::to(['category/search'])?>">
+                                    <input type="text" placeholder="Search" name="q">
+                                </form>
                         </div>
                     </div>
                 </div>
