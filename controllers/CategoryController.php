@@ -26,11 +26,14 @@ class CategoryController extends AppController
 
 		
 		 		$id = Yii::$app->request->get('id');
+		 		$category = Category::findOne($id);
+		 		if(empty($category))
+		 			throw new \yii\web\HttpException(404, 'Не существующая категория');
 		 		// $products = Product::find()->where(['category_id'=> $id])->all();
 		 		$query = Product::find()->where(['category_id'=> $id]);
 		 		$pages = new Pagination(['totalCount' => $query->count(), 'pageSize' => 3, 'forcePageParam'=>false, 'pageSizeParam'=>false]);
 		 		$products = $query->offset($pages->offset)->limit($pages->limit)->all();
-		 		$category = Category::findOne($id); 
+		 		 
 		 		$this->setMeta('AMM-Dnepr | ' . $category->name, $category->keywords,$category->description);
 		 		// debug($id);
 		        return $this->render('view', compact('products','pages','category'));
