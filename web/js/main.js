@@ -8,6 +8,25 @@ if ($.fn.slider) {
         speed: 300
     });
 
+    $('.add-to-cart').on('click', function (e) {
+        e.preventDefault();
+        var id = $(this).data('id'),
+            qty = $('#qty').val();
+        $.ajax({
+            url: '/cart/add',
+            data: {id: id, qty: qty},
+            type: 'GET',
+            success: function(res){
+                if(!res) alert('Ошибка!');
+                showCart(res);
+            },
+            error: function(){
+                alert('Error!');
+            }
+        });
+    });
+
+
 var RGBChange = function () {
     $('#RGB').css('background', 'rgb(' + r.getValue() + ',' + g.getValue() + ',' + b.getValue() + ')')
 };
