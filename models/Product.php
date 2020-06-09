@@ -8,7 +8,7 @@ class Product extends ActiveRecord{
 
 	public static function primaryKey()
       {
-          return ["category_id"];
+          return ['id'];
       }
 
 	public static function tableName(){

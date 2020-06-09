@@ -8,7 +8,7 @@ class Category extends ActiveRecord{
 
 	public static function primaryKey()
       {
-          return ["id"];
+          return ['id'];
       }
 
 	public static function tableName(){
