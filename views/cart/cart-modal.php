@@ -31,6 +31,8 @@
             </tbody>
         </table>
     </div>
+
+    
 <?php else: ?>
     <h3>Корзина пуста</h3>
 <?php endif;?>
