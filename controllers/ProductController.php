@@ -16,7 +16,7 @@ class ProductController extends AppController {
 		$product = Product::find()->with('category')->where(['id' => $id])->limit(1)->one();
 		if(empty($product))
 		 			throw new \yii\web\HttpException(404, 'неверно выбранный товар');
-		$hits = Product::find()->where(['hit'=> 1])->limit(5)->all();
+		$hits = Product::find()->where(['hit'=> 1])->limit(6)->all();
 		$this->setMeta('AMM-Dnepr | ' . $product->name, $product->keywords,$product->description);
 		return $this->render('view',compact('product', 'hits'));
 

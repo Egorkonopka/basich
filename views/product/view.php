@@ -51,14 +51,15 @@ use yii\helpers\Url;
 								<?= Html::img("@web/images/products/{$product->img}",['alt'=>$product->name]) ?>
 								<h3>ZOOM</h3>
 							</div>
+	<!-- Wrapper -->
 							<div id="similar-product" class="carousel slide" data-ride="carousel">
 								
 								  <!-- Wrapper for slides -->
 								    <div class="carousel-inner">
 										<div class="item active">
-										  <a href=""><img src="/images/product-details/similar1.jpg" alt=""></a>
-										  <a href=""><img src="/images/product-details/similar2.jpg" alt=""></a>
-										  <a href=""><img src="/images/product-details/similar3.jpg" alt=""></a>
+										  <a href=""><img class="dopimg" src="/images/product-details/<?= $product->parent_p ?>/1.jpg" alt=""></a>
+										  <a href=""><img class="dopimg" src="/images/product-details/<?= $product->parent_p ?>/2.jpg" alt=""></a>
+										  <a href=""><img class="dopimg" src="/images/product-details/<?= $product->parent_p ?>/3.jpg" alt=""></a>
 										</div>
 										<div class="item">
 										  <a href=""><img src="/images/product-details/similar1.jpg" alt=""></a>
@@ -82,6 +83,7 @@ use yii\helpers\Url;
 								  </a>
 							</div>
 
+<!-- Wrapper -->
 						</div>
 						<div class="col-sm-7">
 							<div class="product-information"><!--/product-information-->
@@ -93,6 +95,7 @@ use yii\helpers\Url;
                                         <?php endif ?>
 								<h2><?= $product->name ?></h2>
 								<p>Web ID: 1089772</p>
+								<p><?= $product->parent_p ?></p>
 								<img src="/images/product-details/rating.png" alt="" />
 								<span>
 									<span>US$ <?= $product->price ?></span>

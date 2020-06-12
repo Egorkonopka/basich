@@ -3,8 +3,8 @@
 namespace app\controllers;
 use app\models\Product;
 use app\models\Cart;
-use app\models\Orders;
-use app\models\OrdersItems;
+use app\models\Order;
+use app\models\OrderItems;
 use Yii;
 
 
@@ -57,36 +57,39 @@ class CartController extends AppController {
     	$session =Yii::$app->session;
         $session->open();
         $this->setMeta('Корзина');
-        $orders = new Orders();
-        if( $orders->load(Yii::$app->request->post()) ){
-        	$orders->qty = $session['cart.qty'];
-            $orders->sum = $session['cart.sum'];
-            if($orders->save()){
-            	$this->saveOrdersItems($session['cart'], $orders->id);
-            	Yii::$app->session->setFlash('success','Ваш заказ принят');
+        $order = new Order();
+        if( $order->load(Yii::$app->request->post()) ){
+            $order->qty = $session['cart.qty'];
+            $order->sum = $session['cart.sum'];
+            $ii = Order::find()->max('id');  // костыль !! придумать другое решение
+            $v2 = $ii+1;  // костыль !! придумать другое решение (тригер с помощью тригера)
+            if($order->save()){
+                $this->saveOrderItems($session['cart'], $v2);
+                Yii::$app->session->setFlash('success', 'Ваш заказ принят. Менеджер вскоре свяжется с Вами.');
+                $session->remove('cart');
+                $session->remove('cart.qty');
+                $session->remove('cart.sum');
             	return $this->refresh();
             }else{
-            	Yii::$app->session->setFlash('error','Ошибка оформления заказа');
+                Yii::$app->session->setFlash('error', 'Ошибка оформления заказа');
             }
         }
-        // debug($orders);
-
-        return $this->render('view',compact('session','orders'));
+        // debug($order->id);
+        return $this->render('view', compact('session', 'order'));
     }
 
 
-        protected function saveOrdersItems($items, $order_id){
+	protected function saveOrderItems($items, $order_id){
         foreach($items as $id => $item){
-            $orders_items = new OrdersItems();
-            $orders_items->order_id = $order_id;
-            $orders_items->product_id = $id;
-            $orders_items->name = $item['name'];
-            $orders_items->price = $item['price'];
-            $orders_items->qty_item = $item['qty'];
-            $orders_items->sum_item = $item['qty'] * $item['price'];
-            $orders_items->save();
+            $order_items = new OrderItems();
+            $order_items->order_id = $order_id;
+            $order_items->product_id = $id;
+            $order_items->name = $item['name'];
+            $order_items->price = $item['price'];
+            $order_items->qty_item = $item['qty'];
+            $order_items->sum_item = $item['qty'] * $item['price'];
+            $order_items->save();
         }
-        // debug($orders_items);
     }
 
 }

@@ -58,14 +58,13 @@ use yii\helpers\Url;
         </table>
     </div>
 
-
     <hr/>
 
     <?php $form = ActiveForm::begin()?>
-        <?= $form->field($orders, 'name')?>
-        <?= $form->field($orders, 'email')?>
-        <?= $form->field($orders, 'phone')?>
-        <?= $form->field($orders, 'address')?>
+        <?= $form->field($order, 'name')?>
+        <?= $form->field($order, 'email')?>
+        <?= $form->field($order, 'phone')?>
+        <?= $form->field($order, 'address')?>
         <?= Html::submitButton('Заказать', ['class' => 'btn btn-success'])?>
         <?php ActiveForm::end()?>
 
