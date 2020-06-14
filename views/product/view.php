@@ -46,7 +46,7 @@ use yii\helpers\Url;
 				
 				<div class="col-sm-9 padding-right">
 					<div class="product-details"><!--product-details-->
-						<div class="col-sm-5">
+						<div class="col-sm-7">
 							<div class="view-product">
 								<?= Html::img("@web/images/products/{$product->img}",['alt'=>$product->name]) ?>
 								<h3>ZOOM</h3>
@@ -62,14 +62,14 @@ use yii\helpers\Url;
 										  <a href=""><img class="dopimg" src="/images/product-details/<?= $product->parent_p ?>/3.jpg" alt=""></a>
 										</div>
 										<div class="item">
-										  <a href=""><img src="/images/product-details/similar1.jpg" alt=""></a>
-										  <a href=""><img src="/images/product-details/similar2.jpg" alt=""></a>
-										  <a href=""><img src="/images/product-details/similar3.jpg" alt=""></a>
+										  <a href=""><img class="dopimg" src="/images/product-details/<?= $product->parent_p ?>/4.jpg" alt=""></a>
+										  <a href=""><img class="dopimg" src="/images/product-details/<?= $product->parent_p ?>/5.jpg" alt=""></a>
+										  <a href=""><img class="dopimg" src="/images/product-details/<?= $product->parent_p ?>/6.jpg" alt=""></a>
 										</div>
 										<div class="item">
-										  <a href=""><img src="/images/product-details/similar1.jpg" alt=""></a>
-										  <a href=""><img src="/images/product-details/similar2.jpg" alt=""></a>
-										  <a href=""><img src="/images/product-details/similar3.jpg" alt=""></a>
+										  <a href=""><img class="dopimg" src="/images/product-details/<?= $product->parent_p ?>/7.jpg" alt=""></a>
+										  <a href=""><img class="dopimg" src="/images/product-details/<?= $product->parent_p ?>/8.jpg" alt=""></a>
+										  <a href=""><img class="dopimg" src="/images/product-details/<?= $product->parent_p ?>/9.jpg" alt=""></a>
 										</div>
 										
 									</div>
@@ -85,7 +85,7 @@ use yii\helpers\Url;
 
 <!-- Wrapper -->
 						</div>
-						<div class="col-sm-7">
+						<div class="col-sm-5">
 							<div class="product-information"><!--/product-information-->
 								<?php if($product->new): ?>	
                                             <?= Html::img("@web/images/home/new.png", ['alt' => 'Новинка','class'=>'newarrival']) ?>
@@ -95,7 +95,6 @@ use yii\helpers\Url;
                                         <?php endif ?>
 								<h2><?= $product->name ?></h2>
 								<p>Web ID: 1089772</p>
-								<p><?= $product->parent_p ?></p>
 								<img src="/images/product-details/rating.png" alt="" />
 								<span>
 									<span>US$ <?= $product->price ?></span>

@@ -9,6 +9,13 @@ $config = [
     'bootstrap' => ['log'],
     'language' => 'ru-RU',
     'defaultRoute' => 'category/index',
+    'modules' => [
+        'admin' => [
+            'class' => 'app\modules\admin\Module',
+            'layout' => 'admin',
+            'defaultRoute' => 'order/index',
+        ],
+    ],
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
@@ -34,7 +41,15 @@ $config = [
             // send all mails to a file by default. You have to set
             // 'useFileTransport' to false and configure a transport
             // for the mailer to send real emails.
-            'useFileTransport' => true,
+            'useFileTransport' => false,
+            'transport' => [
+            'class' => 'Swift_SmtpTransport',
+            'host' => 'smtp.ukr.net',
+            'username' => 'egorkonopka@ukr.net',
+            'password' => 'Tvp5PdNOpxu14R6p',
+            'port' => '465',
+            'encryption' => 'ssl',
+                           ],
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,

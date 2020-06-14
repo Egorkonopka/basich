@@ -1192,11 +1192,13 @@ h2.title {
     right: 0;
 }
 
-#similar-product .carousel-inner .item {
+#similar-product .carousel-inner .item {   /*тут*/
+    width: 473.125px; height: 84px;
     padding-left: 0px;
 }
 
 #similar-product .carousel-inner .item img {
+
     display: inline-block;
     margin-left: 15px;
 }
@@ -2331,10 +2333,10 @@ textarea {
 }
 
 .btn.btn-primary {
-    background: #FE980F;
+/*    background: #FE980F;
     border: 0 none;
     border-radius: 0;
-    margin-top: 16px;
+    margin-top: 16px;*/
 }
 
 .blank-arrow {
@@ -2458,4 +2460,4 @@ textarea {
     color: #FE980F;
 }
 
-img.dopimg {width: 90px; height: 90px;}
+img.dopimg {width: 84px; height: 84px;}
