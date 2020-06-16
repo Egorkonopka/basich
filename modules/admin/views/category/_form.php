@@ -6,6 +6,8 @@ use yii\widgets\ActiveForm;
 /* @var $this yii\web\View */
 /* @var $model app\modules\admin\models\Category */
 /* @var $form yii\widgets\ActiveForm */
+// debug($model);
+// return;
 ?>
 
 <div class="category-form">

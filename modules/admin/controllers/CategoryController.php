@@ -37,7 +37,6 @@ class CategoryController extends AppAdminController
         $dataProvider = new ActiveDataProvider([
             'query' => Category::find()->with('category'),
         ]);
-
         return $this->render('index', [
             'dataProvider' => $dataProvider,
         ]);

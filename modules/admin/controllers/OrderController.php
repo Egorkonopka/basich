@@ -37,7 +37,7 @@ class OrderController extends AppAdminController
         $dataProvider = new ActiveDataProvider([
             'query' => Order::find(),
             'pagination' => [
-                'pageSize' => 5
+                'pageSize' => 10
             ],
             'sort' => [
                 'defaultOrder' => [

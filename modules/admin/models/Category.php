@@ -23,6 +23,11 @@ class Category extends \yii\db\ActiveRecord
         return 'category';
     }
 
+    public static function primaryKey()
+      {
+          return ['id'];
+      }  
+
     public function getCategory(){
         return $this->hasOne(Category::className(), ['id' => 'parent_id']);
     }
