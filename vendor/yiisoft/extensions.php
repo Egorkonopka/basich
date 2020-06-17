@@ -48,4 +48,40 @@ return array (
       '@yii/faker' => $vendorDir . '/yiisoft/yii2-faker',
     ),
   ),
+  'mihaildev/ckeditor' => 
+  array (
+    'name' => 'mihaildev/ckeditor',
+    'version' => '2',
+    'alias' => 
+    array (
+      '@mihaildev/ckeditor' => $vendorDir . '/mihaildev/ckeditor',
+    ),
+  ),
+  'yiisoft/yii2-jui' => 
+  array (
+    'name' => 'yiisoft/yii2-jui',
+    'version' => '2.0.7.0',
+    'alias' => 
+    array (
+      '@yii/jui' => $vendorDir . '/yiisoft/yii2-jui',
+    ),
+  ),
+  'mihaildev/yii2-elfinder' => 
+  array (
+    'name' => 'mihaildev/yii2-elfinder',
+    'version' => '1.4.0.0',
+    'alias' => 
+    array (
+      '@mihaildev/elfinder' => $vendorDir . '/mihaildev/yii2-elfinder',
+    ),
+  ),
+  'costa-rico/yii2-images' => 
+  array (
+    'name' => 'costa-rico/yii2-images',
+    'version' => '1.0.5.0',
+    'alias' => 
+    array (
+      '@rico/yii2images' => $vendorDir . '/costa-rico/yii2-images',
+    ),
+  ),
 );

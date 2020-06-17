@@ -43,12 +43,20 @@ use yii\helpers\Url;
 						
 					</div>
 				</div>
+
+<?php
+$mainImg = $product->getImage();
+$gallery = $product->getImages();
+debug($mainImg);
+?>
+
+
 				
 				<div class="col-sm-9 padding-right">
 					<div class="product-details"><!--product-details-->
 						<div class="col-sm-7">
 							<div class="view-product">
-								<?= Html::img("@web/images/products/{$product->img}",['alt'=>$product->name]) ?>
+								 <img src="<?= Url::base() . '/upload/store/' . $mainImg ->filePath ?>" width="100px">
 								<h3>ZOOM</h3>
 							</div>
 	<!-- Wrapper -->
