@@ -52,18 +52,18 @@ use yii\helpers\Url;
 						
 					</div>
 				</div>
-				
+
 				<div class="col-sm-9 padding-right">
 					<div class="features_items"><!--features_items-->
 						<h2 class="title text-center"><?= $category->name ?></h2>
-						
 						<?php $i=0; if(!empty($products)): ?>
 							<?php foreach ($products as $product) :?>
+								<?php $mainImg = $product->getImage();?>
 						<div class="col-sm-4">
 							<div class="product-image-wrapper">
 								<div class="single-products">
 									<div class="productinfo text-center">
-										<?= Html::img("@web/images/products/{$product->img}",['alt' => $product->name]) ?>
+										<img src="<?= Url::base() . '/upload/store/' . $mainImg ->filePath ?>">
 										<h2>$<?= $product->price?></h2>
 										<p><a href="<?= Url::to(['product/view','id'=>$product->id]) ?>"><?= $product->name?></a></p>
 										<a href="#" data-id="<?= $product->id ?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>

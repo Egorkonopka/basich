@@ -1193,12 +1193,12 @@ h2.title {
 }
 
 #similar-product .carousel-inner .item {   /*тут*/
-    width: 473.125px; height: 84px;
-    padding-left: 0px;
+    width: 473.13px; height: 76.5px;
+    padding-left: 25px;
 }
 
 #similar-product .carousel-inner .item img {
-
+    width: 85px; height: 84px;
     display: inline-block;
     margin-left: 15px;
 }
@@ -2459,5 +2459,3 @@ textarea {
 .contact-info .social-networks ul li a:hover {
     color: #FE980F;
 }
-
-img.dopimg {width: 84px; height: 84px;}

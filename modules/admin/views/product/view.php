@@ -24,9 +24,7 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
         ]) ?>
     </p>
-  <!--   <?php $mainImg = $model->getImage();
-    debug($mainImg); ?>
-    <?php $img = $model->getImage(); ?> -->
+ <?php $mainImg = $model->getImage();?>
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
@@ -39,7 +37,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'description',
             [
                 'attribute' => 'image',
-                'value' => "<img src='/upload/store/{$mainImg ->filePath}'>",
+                'value' => "<img src='/upload/store/{$mainImg ->filePath}' width='200px'>",
                 'format' => 'html',
             ],
             'hit',

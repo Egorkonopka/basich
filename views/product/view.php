@@ -47,7 +47,6 @@ use yii\helpers\Url;
 <?php
 $mainImg = $product->getImage();
 $gallery = $product->getImages();
-debug($mainImg);
 ?>
 
 
@@ -56,7 +55,7 @@ debug($mainImg);
 					<div class="product-details"><!--product-details-->
 						<div class="col-sm-7">
 							<div class="view-product">
-								 <img src="<?= Url::base() . '/upload/store/' . $mainImg ->filePath ?>" width="100px">
+								 <img src="<?= Url::base() . '/upload/store/' . $mainImg ->filePath ?>">
 								<h3>ZOOM</h3>
 							</div>
 	<!-- Wrapper -->
@@ -64,22 +63,16 @@ debug($mainImg);
 								
 								  <!-- Wrapper for slides -->
 								    <div class="carousel-inner">
-										<div class="item active">
-										  <a href=""><img class="dopimg" src="/images/product-details/<?= $product->parent_p ?>/1.jpg" alt=""></a>
-										  <a href=""><img class="dopimg" src="/images/product-details/<?= $product->parent_p ?>/2.jpg" alt=""></a>
-										  <a href=""><img class="dopimg" src="/images/product-details/<?= $product->parent_p ?>/3.jpg" alt=""></a>
+<?php $count= count($gallery); $i=0; foreach($gallery as $img): ?>
+<?php if($i % 4 == 0):  ?>
+										<div class="item  <?php if($i == 0) echo 'active'?>">
+<?php endif;?>
+
+										  <a href=""><img src="<?= Url::base() . '/upload/store/' . $img ->filePath ?>"></a>
+<?php $i++; if($i % 4 == 0 || $i == $count):  ?>
 										</div>
-										<div class="item">
-										  <a href=""><img class="dopimg" src="/images/product-details/<?= $product->parent_p ?>/4.jpg" alt=""></a>
-										  <a href=""><img class="dopimg" src="/images/product-details/<?= $product->parent_p ?>/5.jpg" alt=""></a>
-										  <a href=""><img class="dopimg" src="/images/product-details/<?= $product->parent_p ?>/6.jpg" alt=""></a>
-										</div>
-										<div class="item">
-										  <a href=""><img class="dopimg" src="/images/product-details/<?= $product->parent_p ?>/7.jpg" alt=""></a>
-										  <a href=""><img class="dopimg" src="/images/product-details/<?= $product->parent_p ?>/8.jpg" alt=""></a>
-										  <a href=""><img class="dopimg" src="/images/product-details/<?= $product->parent_p ?>/9.jpg" alt=""></a>
-										</div>
-										
+<?php endif; ?>
+<?php endforeach; ?>										
 									</div>
 
 								  <!-- Controls -->
@@ -318,6 +311,7 @@ debug($mainImg);
 						<div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
 							<div class="carousel-inner">
 <?php $count=count($hits); $i=0; foreach($hits as $hit): ?>
+<?php $mainImg = $hit->getImage();?>
 <?php if($i % 3 == 0): ?>
 								<div class="item <?php if($i == 0) echo 'active' ?> ">
 <?php endif; ?>	
@@ -325,7 +319,7 @@ debug($mainImg);
 										<div class="product-image-wrapper">
 											<div class="single-products">
 												<div class="productinfo text-center">
-													<?= Html::img("@web/images/products/{$hit->img}",['alt'=>$hit->name]) ?>
+													<img src="<?= Url::base() . '/upload/store/' . $mainImg ->filePath ?>">
 													<h2>$<?= $hit->price ?></h2>
 													<p><a href="<?= Url::to(['product/view', 'id'=> $hit->id]) ?>"><?= $hit->name ?></a></p>
 													<button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
