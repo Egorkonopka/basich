@@ -106,3 +106,11 @@ $(document).ready(function () {
     });
 });
 
+document.body.onclick = function (event) {
+    event = event;
+    if (event.target.classList.contains('goods-min')){
+        // var add = event.target.src;
+        document.getElementById('goods-max').src = event.target.src;
+        // console.log(add);
+    }
+}

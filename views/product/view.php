@@ -54,11 +54,13 @@ $gallery = $product->getImages();
 				<div class="col-sm-9 padding-right">
 					<div class="product-details"><!--product-details-->
 						<div class="col-sm-7">
+							
 							<div class="view-product">
-								 <img src="<?= Url::base() . '/upload/store/' . $mainImg ->filePath ?>">
+
+								 <img id="goods-max" src="<?= Url::base() . '/upload/store/' . $mainImg ->filePath ?>">
 								<h3>ZOOM</h3>
 							</div>
-	<!-- Wrapper -->
+	<!-- Wrapper -->    <!-- <img class="goods-max" src="http://amm-app/upload/store/Products/Product1/182c4e.jpg"> --> 
 							<div id="similar-product" class="carousel slide" data-ride="carousel">
 								
 								  <!-- Wrapper for slides -->
@@ -68,7 +70,7 @@ $gallery = $product->getImages();
 										<div class="item  <?php if($i == 0) echo 'active'?>">
 <?php endif;?>
 
-										  <a href=""><img src="<?= Url::base() . '/upload/store/' . $img ->filePath ?>"></a>
+										  <a><img class="goods-min" src="<?= Url::base() . '/upload/store/' . $img ->filePath ?>"></a>
 <?php $i++; if($i % 4 == 0 || $i == $count):  ?>
 										</div>
 <?php endif; ?>
@@ -89,10 +91,10 @@ $gallery = $product->getImages();
 						<div class="col-sm-5">
 							<div class="product-information"><!--/product-information-->
 								<?php if($product->new): ?>	
-                                            <?= Html::img("@web/images/home/new.png", ['alt' => 'Новинка','class'=>'newarrival']) ?>
+                                            <?= Html::img("@web/images/home/new.png", ['alt' => 'Новинка','class'=>'newarrivalq']) ?>
                                         <?php endif ?>
                                         <?php if($product->sale): ?>
-                                            <?= Html::img("@web/images/home/sale.png", ['alt' => 'Распродажа','class'=>'newarrival']) ?>
+                                            <?= Html::img("@web/images/home/sale.png", ['alt' => 'Распродажа','class'=>'newarrivalq']) ?>
                                         <?php endif ?>
 								<h2><?= $product->name ?></h2>
 								<p>Web ID: 1089772</p>
@@ -306,119 +308,25 @@ $gallery = $product->getImages();
 					</div> --><!--/category-tab-->
 					<div class="row">
 					<ul class="nav nav-tabs">
-								<li><a href="#details" data-toggle="tab">Details</a></li>
+								<li class="active"><a href="#details" data-toggle="tab">Описание</a></li>
 								<li><a href="#companyprofile" data-toggle="tab">Company Profile</a></li>
 								<li><a href="#tag" data-toggle="tab">Tag</a></li>
-								<li class="active"><a href="#reviews" data-toggle="tab">Reviews (5)</a></li>
+								<li><a href="#reviews" data-toggle="tab">Коментарии (5)</a></li>
 					</ul>
 					<div class="tab-content">
-							<div class="tab-pane fade" id="details" >
-								dfgdfgdfgdfg
+							<div class="tab-pane fade container-about-p active in" id="details" >
+								<?= $product->content ?>
 							</div>
 							
-							<div class="tab-pane fade" id="companyprofile" >
-								<div class="col-sm-3">
-									<div class="product-image-wrapper">
-										<div class="single-products">
-											<div class="productinfo text-center">
-												<img src="/images/home/gallery1.jpg" alt="" />
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
-												<button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-3">
-									<div class="product-image-wrapper">
-										<div class="single-products">
-											<div class="productinfo text-center">
-												<img src="/images/home/gallery3.jpg" alt="" />
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
-												<button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-3">
-									<div class="product-image-wrapper">
-										<div class="single-products">
-											<div class="productinfo text-center">
-												<img src="/images/home/gallery2.jpg" alt="" />
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
-												<button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-3">
-									<div class="product-image-wrapper">
-										<div class="single-products">
-											<div class="productinfo text-center">
-												<img src="/images/home/gallery4.jpg" alt="" />
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
-												<button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-											</div>
-										</div>
-									</div>
-								</div>
+							<div class="tab-pane fade container-about-p" id="companyprofile" >
+
 							</div>
 							
-							<div class="tab-pane fade" id="tag" >
-								<div class="col-sm-3">
-									<div class="product-image-wrapper">
-										<div class="single-products">
-											<div class="productinfo text-center">
-												<img src="/images/home/gallery1.jpg" alt="" />
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
-												<button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-3">
-									<div class="product-image-wrapper">
-										<div class="single-products">
-											<div class="productinfo text-center">
-												<img src="/images/home/gallery2.jpg" alt="" />
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
-												<button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-3">
-									<div class="product-image-wrapper">
-										<div class="single-products">
-											<div class="productinfo text-center">
-												<img src="/images/home/gallery3.jpg" alt="" />
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
-												<button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-3">
-									<div class="product-image-wrapper">
-										<div class="single-products">
-											<div class="productinfo text-center">
-												<img src="/images/home/gallery4.jpg" alt="" />
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
-												<button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-											</div>
-										</div>
-									</div>
-								</div>
+							<div class="tab-pane fade container-about-p" id="tag" >
+
 							</div>
 							
-							<div class="tab-pane fade active in" id="reviews" >
+							<div class="tab-pane fade" id="reviews" >
 								<div class="col-sm-12">
 									<ul>
 										<li><a href=""><i class="fa fa-user"></i>EUGEN</a></li>
