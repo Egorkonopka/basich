@@ -70,7 +70,7 @@ $gallery = $product->getImages();
 										<div class="item  <?php if($i == 0) echo 'active'?>">
 <?php endif;?>
 
-										  <a><img class="goods-min" src="<?= Url::base() . '/upload/store/' . $img ->filePath ?>"></a>
+										  <a  href="<?= Url::base() . '/upload/store/' . $img ->filePath ?> " data-fancybox="gallery"><img  class="goods-min" src="<?= Url::base() . '/upload/store/' . $img ->filePath ?> "></a>
 <?php $i++; if($i % 4 == 0 || $i == $count):  ?>
 										</div>
 <?php endif; ?>

@@ -27,6 +27,7 @@ class AppAsset extends AssetBundle
     'css/animate.css',
     'css/main.css',
     'css/responsive.css',
+    'css/jquery.fancybox.min.css',
 
     ];
     public $js = [
@@ -37,7 +38,8 @@ class AppAsset extends AssetBundle
     'js/jquery.prettyPhoto.js',
     'js/jquery.cookie.js',
     'js/jquery.accordion.js',
-    'js/main.js', 
+    'js/main.js',
+    'js/jquery.fancybox.min.js', 
     ];
     public $depends = [
         'yii\web\YiiAsset',
