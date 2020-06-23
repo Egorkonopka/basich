@@ -60,21 +60,32 @@ use yii\helpers\Url;
 				</div>
 		
 				<div class="col-sm-9 padding-right">
-					<?php foreach($product as $categ): ?>
-						
-						<div class="col-sm-4">
-							 <div class="product-image-wrapper">
-							 	<div class="single-products">
-                                        <div class="productinfo text-center">
-                                        	
-                                        	<?= $categ->name?>
-                                    	</div>
-                            	</div>
-                        	</div>
-                    	</div>
+					<?php foreach($product as  $produc): ?>
+						<?php foreach($produc->products as $produ): ?>
+							<?php $mainImg = $produ->getImage();?>
+							<div class="col-sm-4">
+								 <div class="product-image-wrapper">
+								 	<div class="single-products">
+	                                        <div class="productinfo text-center">
+	                                        	<img src="<?= Url::base() . '/upload/store/' . $mainImg ->filePath ?>">
+	                                        	<?=$produ->name?>
+	                                    	</div>
+	                            	</div>
+	                        	</div>
+	                    	</div>
+                    	<?php endforeach; ?>
 					<?php endforeach; ?>	
 				</div>
 			</div>
 		</div>
 	</section>
-	<?=debug($product)?>
+	<?php 
+		foreach ($product as $produc) {
+			// debug($produc->products);
+			foreach ($produc->products as $produ) {
+				echo $produ->name;echo $produ->id.'</br>';
+			}
+		}
+
+	?>
+
