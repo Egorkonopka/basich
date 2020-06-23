@@ -53,6 +53,15 @@ class CategoryController extends AppController
 		        return $this->render('search', compact('products', 'pages', 'q'));
 			}
 
+		public function actionAllcategories(){
+
+	 		$cat= Category::find()->with('products')->where(['parent_id'=> 0])->all();
+	 		$this->setMeta('AMM-Dnepr | Все категории');
+	 		// debug($hits);
+	        return $this->render('allcategories', compact('cat'));
+	        
+	    }
+
 
 
 

@@ -3,7 +3,6 @@
 use yii\helpers\Html;
 use yii\helpers\Url;
 ?>
-
 <section>
 		<div class="container">
 			<div class="row">

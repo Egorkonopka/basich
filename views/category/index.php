@@ -76,7 +76,7 @@ use yii\helpers\Url;
             <div class="row">
                 <div class="col-sm-3">
                     <div class="left-sidebar">
-                        <h2>Category</h2>
+                        <h2>Category</a></h2>
 
 <!--brands_catalog-->
 <ul class="catalog category-products">

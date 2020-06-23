@@ -23,6 +23,27 @@ class ProductController extends AppController {
 	}
 
 	
+		public function actionAllview($id){
+
+		$id = Yii::$app->request->get('id'); //можно убрать
+		// $product = Product::findOne($id);
+		$sql = "select p.id,p.name,p.price,p.img from product p
+left join  category c
+on c.id=p.category_id
+where parent_id = '$id'";
+		$product = Product::findBySql($sql)->all();
+
+		// $product = Category::find()->with('products')->where(['parent_id' => $id])->all();
+		if(empty($product))
+		 			throw new \yii\web\HttpException(404, 'неверноt выбранный товар');
+		$this->setMeta('AMM-Dnepr | ');
+
+		return $this->render('allview',compact('product'));
+
+	}
+
+
+
 
 
 }
