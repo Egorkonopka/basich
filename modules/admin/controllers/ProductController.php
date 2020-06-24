@@ -65,10 +65,11 @@ class ProductController extends Controller
     public function actionCreate()
     {
         $model = new Product();
-
+        $idi = Product::find()->max('id');
+        $v2 = $idi+1;
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             Yii::$app->session->setFlash('success', "Товар {$model->name} добавлен");
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['view', 'id' => $v2]);
         } else {
             return $this->render('create', [
                 'model' => $model,
