@@ -42,8 +42,8 @@ ltAppAsset::register($this);
                     <div class="col-sm-6">
                         <div class="contactinfo">
                             <ul class="nav nav-pills">
-                                <li><a href="#"><i class="fa fa-phone"></i> +2 95 01 88 821</a></li>
-                                <li><a href="#"><i class="fa fa-envelope"></i> info@domain.com</a></li>
+                                <li><a href="tel:+380672825669"><i class="fa fa-phone"></i> +380672825669</a></li>
+                                <li><a href="#"><i class="fa fa-envelope"></i> amm@gmail.com</a></li>
                             </ul>
                         </div>
                     </div>
@@ -99,9 +99,9 @@ ltAppAsset::register($this);
 <?php if(!Yii::$app->user->isGuest): ?>
                                 <li><a href="<?= Url::to(['/site/logout']) ?>"><i class="fa fa-user"></i> <?= Yii::$app->user->identity['username'] ?> (Выход) </a></li>
 <?php endif;?>
-                                <li><a href=""><i class="fa fa-star"></i> Wishlist</a></li>
-                                <li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
-                                <li><a href="#" onclick="return getCart()"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+                                <li><a href=""><i class="fa fa-star"></i> Избранное</a></li>
+                                <li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Выставочный зал</a></li>
+                                <li><a href="#" onclick="return getCart()"><i class="fa fa-shopping-cart"></i> Корзина</a></li>
                                 <li><a href="<?= Url::to(['/admin']) ?>"><i class="fa fa-lock"></i> Login</a></li>
                             </ul>
                         </div>
@@ -124,24 +124,22 @@ ltAppAsset::register($this);
                         </div>
                         <div class="mainmenu pull-left"> 
                             <ul class="nav navbar-nav collapse navbar-collapse">
-                                <li><a href="<?= \yii\helpers\Url::home()?>">Home</a></li>
-                                <li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
+                                <li><a href="<?= \yii\helpers\Url::home()?>">Главная</a></li>
+                                <li class="dropdown"><a href="#">Магазин<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
-                                        <li><a href="<?= \yii\helpers\Url::to(['category/allcategories'])?>">Products</a></li>
-                                        <li><a href="product-details.html">Product Details</a></li> 
-                                        <li><a href="checkout.html">Checkout</a></li> 
-                                        <li><a href="cart.html">Cart</a></li>
-                                        <li><a href="login.html">Login</a></li> 
+                                        <li><a href="<?= \yii\helpers\Url::to(['category/allcategories'])?>">Продукция</a></li>
+                                        <li><a href="product-details.html">Индивидукльное изготовление</a></li> 
+                                        <li><a href="#" onclick="return getCart()">Корзина</a></li> 
                                     </ul>
                                 </li> 
-                                <li class="dropdown"><a href="#">Blog<i class="fa fa-angle-down"></i></a>
+                                <li class="dropdown"><a href="#">Новости<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
                                         <li><a href="blog.html">Blog List</a></li>
                                         <li><a href="blog-single.html">Blog Single</a></li>
                                     </ul>
                                 </li> 
-                                <li><a href="404.html">404</a></li>
-                                <li><a href="contact-us.html">Contact</a></li>
+                                <li><a href="404.html">О компании</a></li>
+                                <li><a href="contact-us.html">Контакты</a></li>
                             </ul>
                         </div>
                     </div>

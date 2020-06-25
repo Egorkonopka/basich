@@ -51,8 +51,8 @@ use yii\helpers\Url;
 							 <div class="product-image-wrapper">
 							 	<div class="single-products">
                                         <div class="productinfo text-center">
-                                        	<p><a href="<?= Url::to(['product/allview','id'=>$categ->id]) ?>"><?= debug($categ->id)?></a></p>
-                                        	<img src="/images/categories/<?= $categ->categ_img?>" alt="" />
+                                        	<p><a href="<?= Url::to(['product/allview','id'=>$categ->id ])?>"><?=$categ->name?></a></p>
+                                        	<a href="<?= Url::to(['product/allview','id'=>$categ->id ])?>"><img src="/images/categories/<?= $categ->categ_img?>" alt="" /></a>
                                     	</div>
                             	</div>
                         	</div>

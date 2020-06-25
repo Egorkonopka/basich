@@ -20,39 +20,41 @@ use yii\helpers\Url;
                         <div class="carousel-inner">
                             <div class="item active">
                                 <div class="col-sm-6">
-                                    <h1><span>E</span>-SHOPPER</h1>
-                                    <h2>Free E-Commerce Template</h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                                    <button type="button" class="btn btn-default get">Get it now</button>
+                                    <h1><span>Высокое качество</span></h1>
+                                    <h2>с материалов, которые Вы выбираете сами</h2>
+
+                                    <p>Вся продукция фирмы <sapn class="amm">"АММ"</sapn> изготовляеться индивидульно, с соблюдением высоких требования к качеству и долговечности изделия. Некоторые варианты уже готовых изделий можно посмотреть в нашем выставочном зале по адресу ..... </p>
+                                    <button type="button" class="btn btn-default get">Показать на карте</button>
+
                                 </div>
                                 <div class="col-sm-6">
-                                    <img src="/images/home/girl1.jpg" class="girl img-responsive" alt="" />
-                                    <img src="/images/home/pricing.png"  class="pricing" alt="" />
+                                    <img src="/images/home/quality.jpg" class="girl img-responsive" alt=""/>
+                                     <!-- <img src="/images/home/pricing.png"  class="pricing" alt="" /> -->
                                 </div>
                             </div>
                             <div class="item">
                                 <div class="col-sm-6">
-                                    <h1><span>E</span>-SHOPPER</h1>
-                                    <h2>100% Responsive Design</h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                                    <button type="button" class="btn btn-default get">Get it now</button>
+                                    <h1>Производство мебели под заказ</h1>
+                                    <p>Производим мебель с учетом индивудульных особенностей каждого изделия</p>
+                                    <p>Рзамер, форму, изголовье и много других опций как подьемные механизмы выдвижные ящики.
+                                    Возожен выезд наших специалистов для проведения замеров и что-то там еще</p>
+                                    <button type="button" class="btn btn-default get">Консультация</button>
                                 </div>
                                 <div class="col-sm-6">
-                                    <img src="/images/home/girl2.jpg" class="girl img-responsive" alt="" />
-                                    <img src="/images/home/pricing.png"  class="pricing" alt="" />
+                                    <img src="/images/home/sizes.png" class="girl img-responsive" alt="" />
+                                    <!-- <img src="/images/home/pricing.png"  class="pricing" alt="" /> -->
                                 </div>
                             </div>
                             
                             <div class="item">
                                 <div class="col-sm-6">
-                                    <h1><span>E</span>-SHOPPER</h1>
-                                    <h2>Free Ecommerce Template</h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                                    <h1>Материалы</h1>
+                                    <h2>Предлагаем большой выбор материалов и расцветки</h2>
+                                    <p>Содрудничество с компанией (забыл как там) позволяет Вам подобрать материал для кровати из огоромного асортимента за самыми выгодными ценами</p>
                                     <button type="button" class="btn btn-default get">Get it now</button>
                                 </div>
                                 <div class="col-sm-6">
-                                    <img src="/images/home/girl3.jpg" class="girl img-responsive" alt="" />
-                                    <img src="/images/home/pricing.png" class="pricing" alt="" />
+                                    <img src="/images/home/image_Amore.jpg" class="girl img-responsive" alt="" />
                                 </div>
                             </div>
                             
@@ -76,7 +78,7 @@ use yii\helpers\Url;
             <div class="row">
                 <div class="col-sm-3">
                     <div class="left-sidebar">
-                        <h2>Category</a></h2>
+                        <h2>Категории</a></h2>
 
 <!--brands_catalog-->
 <ul class="catalog category-products">
@@ -84,22 +86,16 @@ use yii\helpers\Url;
 </ul>
 <!--brands_catalog-->                    
                         <div class="brands_products"><!--brands_products-->
-                            <h2>Brands</h2>
+                            <h2>Производители</h2>
                             <div class="brands-name">
                                 <ul class="nav nav-pills nav-stacked">
-                                    <li><a href="#"> <span class="pull-right">(50)</span>Acne</a></li>
-                                    <li><a href="#"> <span class="pull-right">(56)</span>Grüne Erde</a></li>
-                                    <li><a href="#"> <span class="pull-right">(27)</span>Albiro</a></li>
-                                    <li><a href="#"> <span class="pull-right">(32)</span>Ronhill</a></li>
-                                    <li><a href="#"> <span class="pull-right">(5)</span>Oddmolly</a></li>
-                                    <li><a href="#"> <span class="pull-right">(9)</span>Boudestijn</a></li>
-                                    <li><a href="#"> <span class="pull-right">(4)</span>Rösch creative culture</a></li>
+                                    <li><a href="#"> <span class="pull-right">(50)</span>AMM</a></li>
                                 </ul>
                             </div>
                         </div><!--/brands_products-->
                         
                         <div class="price-range"><!--price-range-->
-                            <h2>Price Range</h2>
+                            <h2>Диапазон цен</h2>
                             <div class="well text-center">
                                  <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="600" data-slider-step="5" data-slider-value="[250,450]" id="sl2" ><br />
                                  <b class="pull-left">$ 0</b> <b class="pull-right">$ 600</b>
@@ -120,7 +116,7 @@ use yii\helpers\Url;
                 <div class="col-sm-9 padding-right">
             <?php if(!empty($hits) ): ?>
                     <div class="features_items"><!--features_items-->
-                        <h2 class="title text-center">Features Items</h2>
+                        <h2 class="title text-center">Популярные модели</h2>
                     <?php foreach($hits as $hit): ?>
                         <?php $mainImg = $hit->getImage();?>
                         <div class="col-sm-4">
@@ -452,7 +448,7 @@ use yii\helpers\Url;
                     </div><!--/category-tab-->
                     
                     <div class="recommended_items"><!--recommended_items-->
-                        <h2 class="title text-center">recommended items</h2>
+                        <h2 class="title text-center">Рекомендуемые товары</h2>
                         
                         <div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
                             <div class="carousel-inner">
