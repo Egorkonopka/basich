@@ -84,12 +84,21 @@ use yii\helpers\Url;
 <ul class="catalog category-products">
 <?= \app\components\MenuWidget::widget(['tpl' => 'menu']) ?>
 </ul>
+<?php 
+$amm = 0;
+    foreach($brand as $brands){
+    if($brands->parent_p == 1){$amm ++;}
+    // echo $brands->parent_p;
+}
+
+
+?>
 <!--brands_catalog-->                    
                         <div class="brands_products"><!--brands_products-->
                             <h2>Производители</h2>
                             <div class="brands-name">
                                 <ul class="nav nav-pills nav-stacked">
-                                    <li><a href="#"> <span class="pull-right">(50)</span>AMM</a></li>
+                                    <li><a href="<?= \yii\helpers\Url::to(['category/allcategories'])?>"><span class="pull-right">(<?= $amm ?>)</span>AMM</a></li>
                                 </ul>
                             </div>
                         </div><!--/brands_products-->
@@ -126,7 +135,7 @@ use yii\helpers\Url;
 
                                              <img src="<?= Url::base() . '/upload/store/' . $mainImg ->filePath ?>">
                                             <h2><?= $hit->price ?></h2>
-                                            <p><a href="<?= Url::to(['product/view','id'=>$hit->id]) ?>"><?= $hit->name ?></a></p>
+                                            <p><a href="<?= Url::to(['product/view','id'=>$hit->id]) ?>"><span class="asdqwe2"><?= $hit->name ?></span></a></p>
                                             <a href="<?= Url::to(['cart/add','id'=>$hit->id]) ?>" data-id="<?= $hit->id ?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                         </div>
 <!--                                         <div class="product-overlay">

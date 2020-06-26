@@ -96,7 +96,7 @@ $gallery = $product->getImages();
                                             <?= Html::img("@web/images/home/sale.png", ['alt' => 'Распродажа','class'=>'newarrivalq']) ?>
                                         <?php endif ?>
 								<h2><?= $product->name ?></h2>
-								<p>Web ID: 1089772</p>
+								<p>prod ID: <?= $product->id?></p>
 								<img src="/images/product-details/rating.png" alt="" />
 								<span>
 									<span>US$ <?= $product->price ?></span>
@@ -107,11 +107,20 @@ $gallery = $product->getImages();
 										Add to cart
 									</a>
 								</span>
+									<p><b>Размеры:</b></p>
+									<p><b><select onchange="calc()" id="type_desigq">
+				                    <option value="0">160 * 200</option>
+				                    <option value="550">120 * 200</option>
+				                    <option value="600">140 * 200</option>
+				                    <option value="650">160 * 200</option>
+				                    <option value="700">свои размеры</option>
+				                	</select></b></p><br/>
 								<p><b>Availability:</b> In Stock</p>
 								<p><b>Condition:</b> New</p>
+								
 								<p><b>Brand:</b><a href="<?= Url::to(['category/view','id'=>$product->category->id]) ?>"><?= $product->category->name ?></a></p>
 								<a href=""><img src="/images/product-details/share.png" class="share img-responsive"  alt="" /></a>
-								<?= $product->content ?>
+								
 							</div><!--/product-information-->
 						</div>
 					</div><!--/product-details-->
@@ -314,7 +323,7 @@ $gallery = $product->getImages();
 					</ul>
 					<div class="tab-content">
 							<div class="tab-pane fade container-about-p active in" id="details" >
-								<?= $product->content ?>
+								<span class="asdqwe2"><?= $product->content ?></span>
 							</div>
 							
 							<div class="tab-pane fade container-about-p" id="companyprofile" >

@@ -67,8 +67,8 @@ use yii\helpers\Url;
 								 <div class="product-image-wrapper">
 								 	<div class="single-products">
 	                                        <div class="productinfo text-center">
-	                                        	<img src="<?= Url::base() . '/upload/store/' . $mainImg ->filePath ?>">
-	                                        	<?=$produ->name?>
+	                                        	<a href="<?= Url::to(['product/view','id'=>$produ->id]) ?>"><img src="<?= Url::base() . '/upload/store/' . $mainImg ->filePath ?>"></a>
+	                                        	<p><a href="<?= Url::to(['product/view','id'=>$produ->id]) ?>"><span class="asdqwe2"><?=$produ->name?></span></a></p>
 	                                    	</div>
 	                            	</div>
 	                        	</div>
