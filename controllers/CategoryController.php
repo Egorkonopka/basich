@@ -17,8 +17,9 @@ class CategoryController extends AppController
 
 		 		$hits = Product::find()->where(['hit'=> 1])->limit(6)->all();
 		 		$this->setMeta('AMM-Dnepr');
+		 		$brand = Product::find()->all();
 		 		// debug($hits);
-		        return $this->render('index', compact('hits'));
+		        return $this->render('index', compact('hits','brand'));
 		        
 		    }
 
@@ -61,6 +62,13 @@ class CategoryController extends AppController
 	        return $this->render('allcategories', compact('cat'));
 	        
 	    }
+
+
+			public function actionDislocation(){
+				$i= 1;
+
+		return $this->render('dislocation',compact('i'));
+	}
 
 
 

@@ -12,21 +12,25 @@ use yii\helpers\Url;
 						<ul class="catalog category-products">
 						<?= \app\components\MenuWidget::widget(['tpl' => 'menu']) ?>
 						</ul>
-					
-						<div class="brands_products"><!--brands_products-->
-							<h2>Brands</h2>
-							<div class="brands-name">
-								<ul class="nav nav-pills nav-stacked">
-									<li><a href=""> <span class="pull-right">(50)</span>Acne</a></li>
-									<li><a href=""> <span class="pull-right">(56)</span>Grüne Erde</a></li>
-									<li><a href=""> <span class="pull-right">(27)</span>Albiro</a></li>
-									<li><a href=""> <span class="pull-right">(32)</span>Ronhill</a></li>
-									<li><a href=""> <span class="pull-right">(5)</span>Oddmolly</a></li>
-									<li><a href=""> <span class="pull-right">(9)</span>Boudestijn</a></li>
-									<li><a href=""> <span class="pull-right">(4)</span>Rösch creative culture</a></li>
-								</ul>
-							</div>
-						</div><!--/brands_products-->
+<?php
+$amm = 0;
+$a_lines = 0;
+    foreach($brand as $brands){
+    if($brands->parent_p == 1){$amm ++;}
+    if($brands->parent_p == 2){$a_lines ++;}
+    // echo $brands->parent_p;
+}
+?>					
+<!--brands_catalog-->                    
+                        <div class="brands_products"><!--brands_products-->
+                            <h2>Производители</h2>
+                            <div class="brands-name">
+                                <ul class="nav nav-pills nav-stacked">
+                                    <li><a href="<?= \yii\helpers\Url::to(['category/allcategories'])?>"><span class="pull-right">(<?= $amm ?>)</span>AMM</a></li>
+                                    <li><a href="<?= \yii\helpers\Url::to(['category/allcategories'])?>"><span class="pull-right">(<?= $a_lines ?>)</span>A-Linens</a></li>  
+                                </ul>
+                            </div>
+                        </div><!--/brands_products-->
 						
 						<div class="price-range"><!--price-range-->
 							<h2>Price Range</h2>
@@ -96,7 +100,7 @@ $gallery = $product->getImages();
                                             <?= Html::img("@web/images/home/sale.png", ['alt' => 'Распродажа','class'=>'newarrivalq']) ?>
                                         <?php endif ?>
 								<h2><?= $product->name ?></h2>
-								<p>Web ID: 1089772</p>
+								<p>Артикул: <?= $product->id?></p>
 								<img src="/images/product-details/rating.png" alt="" />
 								<span>
 									<span>US$ <?= $product->price ?></span>
@@ -107,11 +111,20 @@ $gallery = $product->getImages();
 										Add to cart
 									</a>
 								</span>
+									<p><b>Размеры:</b></p>
+									<p><b><select onchange="calc()" id="type_desigq">
+				                    <option value="0">160 * 200</option>
+				                    <option value="550">120 * 200</option>
+				                    <option value="600">140 * 200</option>
+				                    <option value="650">160 * 200</option>
+				                    <option value="700">свои размеры</option>
+				                	</select></b></p><br/>
 								<p><b>Availability:</b> In Stock</p>
 								<p><b>Condition:</b> New</p>
+								
 								<p><b>Brand:</b><a href="<?= Url::to(['category/view','id'=>$product->category->id]) ?>"><?= $product->category->name ?></a></p>
 								<a href=""><img src="/images/product-details/share.png" class="share img-responsive"  alt="" /></a>
-								<?= $product->content ?>
+								
 							</div><!--/product-information-->
 						</div>
 					</div><!--/product-details-->
@@ -314,7 +327,7 @@ $gallery = $product->getImages();
 					</ul>
 					<div class="tab-content">
 							<div class="tab-pane fade container-about-p active in" id="details" >
-								<?= $product->content ?>
+								<span class="asdqwe2"><?= $product->content ?></span>
 							</div>
 							
 							<div class="tab-pane fade container-about-p" id="companyprofile" >
@@ -351,6 +364,9 @@ $gallery = $product->getImages();
 							
 						</div>
 					</div>
+					<br/>
+					<br/>
+					<br/>
 					<div class="recommended_items"><!--recommended_items-->
 						<h2 class="title text-center">recommended items</h2>
 						

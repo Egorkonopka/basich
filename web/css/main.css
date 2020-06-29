@@ -2474,3 +2474,22 @@ textarea {
     margin-bottom: 20px;
 
 }
+
+
+.amm{
+    color : #FE980F;
+    font-family: abel;
+}
+
+.asdqwe {
+    color: #696763;;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+}
+.asdqwe2 {
+    color: #696763;;
+    /*text-transform: uppercase;*/
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+}
