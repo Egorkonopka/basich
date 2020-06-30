@@ -2493,3 +2493,35 @@ textarea {
     font-size: 14px;
     font-family: 'Roboto', sans-serif;
 }
+
+/*.logistic {
+    background: #c7b39b url(images/bg.jpg); /* Цвет фона и путь к файлу */
+  /*  color: #fff; /* Цвет текста */
+   /*}*/
+   .winddiv{
+background-color: #F0F0E9;
+border: 2px solid #CCCCC6;
+border-radius: 3px;
+text-align: center;
+color: #8C8C88;
+font-family: 'Roboto', sans-serif;
+}
+
+.windimg{
+width: 20%;
+text-align: center;
+}
+
+
+.winddiv h2 {
+    color: #666663;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 22px;
+    text-transform: uppercase;
+}
+
+.ss{
+    padding-bottom: 15px;
+}

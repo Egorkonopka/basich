@@ -52,9 +52,7 @@ ltAppAsset::register($this);
                             <ul class="nav navbar-nav">
                                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -68,29 +66,6 @@ ltAppAsset::register($this);
                     <div class="col-md-4 clearfix">
                         <div class="logo pull-left">
                             <a href="<?= \yii\helpers\Url::home()?>"><?= Html::img('@web/images/home/logo.png', ['alt' => 'E-SHOPPER'])?></a>
-                        </div>
-                        <div class="btn-group pull-right clearfix">
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
-                                    USA
-                                    <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a href="">Canada</a></li>
-                                    <li><a href="">UK</a></li>
-                                </ul>
-                            </div>
-                            
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
-                                    DOLLAR
-                                    <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a href="">Canadian Dollar</a></li>
-                                    <li><a href="">Pound</a></li>
-                                </ul>
-                            </div>
                         </div>
                     </div>
                     <div class="col-md-8 clearfix">
@@ -128,7 +103,8 @@ ltAppAsset::register($this);
                                 <li class="dropdown"><a href="#">Магазин<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
                                         <li><a href="<?= \yii\helpers\Url::to(['category/allcategories'])?>">Продукция</a></li>
-                                        <li><a href="product-details.html">Индивидукльное изготовление</a></li> 
+                                        <li><a href="product-details.html">Индивидукльное изготовление</a></li>
+                                        <li><a href="<?= \yii\helpers\Url::to(['site/about'])?>">Доставка и оплата</a></li>  
                                         <li><a href="#" onclick="return getCart()">Корзина</a></li> 
                                     </ul>
                                 </li> 
