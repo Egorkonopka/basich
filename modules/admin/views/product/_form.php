@@ -47,10 +47,11 @@ mihaildev\elfinder\Assets::noConflict($this);
 
     <?= $form->field($model, 'sale')->checkbox([ '0', '1', ]) ?>
 
+    <?php echo $form->field($model, 'parent_p')->dropDownList(\yii\helpers\ArrayHelper::map(app\modules\admin\models\Brands::find()->all(), 'id', 'parent_name')) ?>
+
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>
-
     <?php ActiveForm::end(); ?>
 
 </div>

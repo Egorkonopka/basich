@@ -4,6 +4,7 @@ namespace app\modules\admin\controllers;
 
 use Yii;
 use app\modules\admin\models\Product;
+use app\modules\admin\models\Brands;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -101,8 +102,7 @@ class ProductController extends Controller
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('update', [
-                'model' => $model,
-            ]);
+                'model' => $model]);
         }
     }
 

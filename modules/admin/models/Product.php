@@ -50,6 +50,9 @@ class Product extends \yii\db\ActiveRecord
         return $this->hasOne(Category::className(), ['id' => 'category_id']);
     }
 
+    public function getBrands(){
+        return $this->hasOne(Brands::className(), ['id' => 'parent_p']);
+    }
     /**
      * @inheritdoc
      */
@@ -63,6 +66,7 @@ class Product extends \yii\db\ActiveRecord
             [['name', 'keywords', 'description', 'img'], 'string', 'max' => 255],
             [['image'], 'file', 'extensions' => 'png, jpg'],
             [['gallery'], 'file', 'extensions' => 'png, jpg', 'maxFiles' => 6],
+            [['parent_p'], 'integer'],
         ];
     }
 
@@ -84,6 +88,7 @@ class Product extends \yii\db\ActiveRecord
             'hit' => 'Хит',
             'new' => 'Новинка',
             'sale' => 'Распродажа',
+            'parent_p' => 'Бренд',
         ];
     }
 

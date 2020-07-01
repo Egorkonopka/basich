@@ -65,7 +65,7 @@ ltAppAsset::register($this);
                 <div class="row">
                     <div class="col-md-4 clearfix">
                         <div class="logo pull-left">
-                            <a href="<?= \yii\helpers\Url::home()?>"><?= Html::img('@web/images/home/logo.png', ['alt' => 'E-SHOPPER'])?></a>
+                            <a href="<?= \yii\helpers\Url::home()?>"><?= Html::img('@web/images/home/logot.png', ['alt' => 'E-SHOPPER'])?></a>
                         </div>
                     </div>
                     <div class="col-md-8 clearfix">

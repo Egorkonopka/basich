@@ -81,16 +81,17 @@ use yii\helpers\Url;
                         <h2>Категории</a></h2>
 
 <!--brands_catalog-->
-<ul class="catalog category-products">
+<ul class="catalog category-products sss">
 <?= \app\components\MenuWidget::widget(['tpl' => 'menu']) ?>
 </ul>
 <?php 
 $amm = 0;
 $a_lines = 0;
+$premium = 0;
     foreach($brand as $brands){
     if($brands->parent_p == 1){$amm ++;}
     if($brands->parent_p == 2){$a_lines ++;}
-    // echo $brands->parent_p;
+    if($brands->parent_p == 3){$premium ++;}
 }
 ?>
 <!--brands_catalog-->                    
@@ -99,7 +100,8 @@ $a_lines = 0;
                             <div class="brands-name">
                                 <ul class="nav nav-pills nav-stacked">
                                     <li><a href="<?= \yii\helpers\Url::to(['category/allcategories'])?>"><span class="pull-right">(<?= $amm ?>)</span>AMM</a></li>
-                                    <li><a href="<?= \yii\helpers\Url::to(['category/allcategories'])?>"><span class="pull-right">(<?= $a_lines ?>)</span>A-Linens</a></li>  
+                                    <li><a href="<?= \yii\helpers\Url::to(['category/allcategories'])?>"><span class="pull-right">(<?= $a_lines ?>)</span>A-Linens</a></li>
+                                    <li><a href="<?= \yii\helpers\Url::to(['category/allcategories'])?>"><span class="pull-right">(<?= $premium ?>)</span>AMM-Premium</a></li>  
                                 </ul>
                             </div>
                         </div><!--/brands_products-->
